@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Gabarito:wght@500&family=Josefin+Sans:ital,wght@1,700&family=Nunito+Sans:ital,opsz,wght@0,6..12,400;1,6..12,500;1,6..12,700&family=Nunito:wght@300;500;700&family=Playpen+Sans:wght@200;500&family=Quicksand:wght@400;500&family=Roboto:wght@100;300;500&display=swap');
+.about{
+    font-family: 'Gabarito', sans-serif;
+    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Nunito', sans-serif;
+    font-family: 'Nunito Sans', sans-serif;
+    font-family: 'Playpen Sans', cursive;
+    font-family: 'Quicksand', sans-serif;
+    font-family: 'Roboto', sans-serif;
+}
+.title{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    color:  rgb(0, 17, 255);
+    margin-left: auto;
+    margin-right: auto;
+}

@@ -1,0 +1,21 @@
+.nav{
+    color: rgb(0, 17, 255);
+}
+.logo{
+    width: 3rem;
+}
+.logo-word{
+    color:#5271FF;
+    padding-left: 1rem;
+
+}
+.btn-sign{
+    border-color: #5271FF;
+    border-style: solid;
+    color: #5271FF;
+}
+.btn-sign:hover{
+    background-color: #5271FF;
+    color: white;
+    border-color: #5271FF;
+}
