@@ -1,3 +1,6 @@
+#signin{
+  overflow: hidden;
+}
 .divider:after,
 .divider:before {
   content: "";

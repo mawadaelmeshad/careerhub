@@ -50,15 +50,12 @@ function Signin() {
                 <p className="lead fw-normal mb-0 me-3">Sign in with</p>
 
                 <MDBBtn floating size='md' tag='a' className='me-2' style={{ color: 'white' }}>
-                <FontAwesomeIcon icon="fa-brands fa-facebook-f" style={{ color: 'white' }}/>
+                <MDBIcon fab icon='facebook' />
                 </MDBBtn>
                 <MDBBtn floating size='md' tag='a'  className='me-2' style={{ color: 'white' }}>
-                <MDBIcon fab icon='twitter' />
+                <MDBIcon fab icon='google' />
                 </MDBBtn>
 
-                <MDBBtn floating size='md' tag='a'  className='me-2'>
-                <MDBIcon fab icon='linkedin-in' />
-                </MDBBtn>
 
             </div>
 
@@ -77,8 +74,10 @@ function Signin() {
                 <div className='text-center text-md-start mt-4 pt-2'>
                     <MDBBtn className="mb-0 px-5" size='lg' type='submit'>Login</MDBBtn>
                     <p className="small fw-bold mt-2 pt-1 mb-2">Don't have an account? <a href="#!" className="link-danger">Sign up</a></p>
+                    
                 </div>
             </form>
+  
             </MDBCol>
         </MDBRow>
 

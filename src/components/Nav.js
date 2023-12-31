@@ -20,10 +20,15 @@ import {
 import 'mdb-react-ui-kit/dist/css/mdb.min.css';
 import logo from '../imgs/Logo.png';
 import '../components/css-components/nav.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBars } from '@fortawesome/free-solid-svg-icons';
+import '@fortawesome/fontawesome-free/css/all.min.css';
+import 'mdb-react-ui-kit/dist/css/mdb.min.css';
+
 
 
     function Nav() {
-    const [openNavNoTogglerSecond, setOpenNavNoTogglerSecond] = useState(false);
+        const [showBasic, setShowBasic] = useState(false);
 
     return (
         <>
@@ -31,16 +36,14 @@ import '../components/css-components/nav.css';
             <MDBContainer fluid>
             <MDBNavbarBrand href='#'className='logo-word'><img src={logo} alt='logo' className='logo' />CareerHub</MDBNavbarBrand>
             <MDBNavbarToggler
-                type='button'
-                data-target='#navbarTogglerDemo02'
-                aria-controls='navbarTogglerDemo02'
+                aria-controls='navbarSupportedContent'
                 aria-expanded='false'
                 aria-label='Toggle navigation'
-                onClick={() => setOpenNavNoTogglerSecond(!openNavNoTogglerSecond)}
-            >
-                <MDBIcon icon='bars' fas />
-            </MDBNavbarToggler>
-            <MDBCollapse navbar open={openNavNoTogglerSecond}>
+                onClick={() => setShowBasic(!showBasic)}
+                >
+                    <FontAwesomeIcon icon={faBars} style={{ color: '#5271FF', fontSize: '1.9rem' }} />
+                </MDBNavbarToggler>
+                <MDBCollapse navbar show={showBasic}>
                 <MDBNavbarNav className='justify-content-center  mb-2 mb-lg-0'>
                 <MDBNavbarItem>
                     <MDBNavbarLink active aria-current='page' href='#'>
