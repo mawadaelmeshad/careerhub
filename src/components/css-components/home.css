@@ -8,6 +8,7 @@
     font-family: 'Playpen Sans', cursive;
     font-family: 'Quicksand', sans-serif;
     font-family: 'Roboto', sans-serif;
+    overflow: hidden;
 }
 .home .home-bg img{
     position: relative;
@@ -21,9 +22,18 @@
     top: 55%;
     left: 50%;
     transform: translate(-50%, -50%);
+    margin: auto;
     color: white;
 }
 .home .words h2{
     color: rgb(0, 17, 255);
     font-size: 2.5rem;
+}
+@media( max-width : 650px){
+    .home .words h2{
+        font-size: 2.2rem;
+    }
+    .home .words{
+        top: 50%;
+    }
 }

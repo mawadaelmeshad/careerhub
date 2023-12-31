@@ -84,8 +84,8 @@ import '../components/css-components/nav.css';
                 <MDBBtn outline>Search</MDBBtn>
                 </MDBInputGroup> */}
                 <MDBContainer tag="form" fluid className='d-flex justify-content-end align-items-center'>
-                    <MDBBtn outline color="info" className='me-2 btn-sign' type='button'>Sign in
-                    </MDBBtn>
+                    <MDBBtn outline color="info" className='me-2 btn-sign' type='button'>
+                    <a href='#signin'>sign in</a></MDBBtn>
                     <MDBBtn outline color="info" className='me-2 btn-sign' type='button'>Sign up
                     </MDBBtn>
                 </MDBContainer>
