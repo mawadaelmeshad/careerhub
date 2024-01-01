@@ -3,7 +3,7 @@ import "./css-components/home.css";
 
 function Home(){
     return(
-        <div className="home">
+        <div className="home" id="#home">
             <div className="home-bg">
                 <img src={home} alt="home" />
             </div>
