@@ -27,11 +27,16 @@ function Signup() {
    
   const submitt = (e)=>{
     e.preventDefault()
+    if (setPassword !== setConfirmation) {
+        // Display an error message or handle the mismatch
+        swal("Passwords do not match");
+        return; // Prevent further execution of the registration process
+    }
     axios.post('https://civet-top-actively.ngrok-free.app/api/register',{
                     name,
                     email : mail,
                     password,
-                    password_confirmation : password,
+                    password_confirmation: confirmation,
                     "ngrok-skip-browser-warning": "69420",
     })
     .then(()=>navigate("/signin"))

@@ -9,10 +9,10 @@ import { Route, Routes } from 'react-router-dom';
 function App() {
   return (
     <div className="App">
+       <Nav />
      <Routes>
         <Route path='/' element={
         <>
-        <Nav />
         <Home/>
         <Signin />
         <Signup />
@@ -21,6 +21,8 @@ function App() {
         </Route>
 
         <Route path='/signin' element={<Signin />}></Route>
+        <Route path='/home' element={<Home />}></Route>
+
         
       </Routes>
     </div>

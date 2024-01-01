@@ -22,15 +22,7 @@ function Signin() {
             email:mail,
             password,
         })
-        .then(res =>
-            {  
-                if(res.data.is_admin === "0"){
-                    navigate("/")
-                    
-                }else if(res.data.is_admin === "1"){
-                    window.location.href = `http://localhost:3000?${res.data.token}`;
-                }
-            })
+        .then(()=>navigate("/home"))
             .catch(()=>swal("Sorry , email or password is incorrect!"))
         }
 
