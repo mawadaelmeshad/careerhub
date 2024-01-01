@@ -16,10 +16,11 @@
     background-size: cover;
     filter: brightness(23%);
     min-height: fit-content;
+    height: 100vh;
 }
 .home .words{
     position: absolute;
-    top: 55%;
+    top: 58%;
     left: 50%;
     transform: translate(-50%, -50%);
     margin: auto;
@@ -34,6 +35,6 @@
         font-size: 2.2rem;
     }
     .home .words{
-        top: 50%;
+        top: 60%;
     }
 }

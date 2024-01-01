@@ -31,7 +31,7 @@ function Signin() {
                     window.location.href = `http://localhost:3000?${res.data.token}`;
                 }
             })
-            .catch(()=>swal("Email Or Password Is Incorrect"))
+            .catch(()=>swal("Sorry , email or password is incorrect!"))
         }
 
   return (
@@ -39,8 +39,8 @@ function Signin() {
 
         <MDBRow>
 
-            <MDBCol col='10' md='6'>
-            <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.webp" class="img-fluid" alt="Sample image" className='img-login'/>
+            <MDBCol col='10' md='6' sm='8' className='align-items-center justify-content-center'>
+            <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.webp" class="img-fluid text-center mx-auto img-login" alt="Sample image" />
             </MDBCol>
 
             <MDBCol col='4' md='6'>
@@ -73,7 +73,7 @@ function Signin() {
 
                 <div className='text-center text-md-start mt-4 pt-2'>
                     <MDBBtn className="mb-0 px-5" size='lg' type='submit'>Login</MDBBtn>
-                    <p className="small fw-bold mt-2 pt-1 mb-2">Don't have an account? <a href="#!" className="link-danger">Sign up</a></p>
+                    <p className="small fw-bold mt-2 pt-1 mb-2">Don't have an account? <a href="#signup" className="link-danger">Sign up</a></p>
                     
                 </div>
             </form>

@@ -1,21 +1,19 @@
 import React, { useState } from 'react';
 import {
-    MDBNavbar,
     MDBContainer,
+    MDBNavbar,
     MDBNavbarBrand,
     MDBNavbarToggler,
-    MDBNavbarItem,
-    MDBNavbarLink,
-    MDBCollapse,
-    MDBBtn,
     MDBIcon,
     MDBNavbarNav,
-    MDBInputGroup,
+    MDBNavbarItem,
+    MDBNavbarLink,
+    MDBBtn,
     MDBDropdown,
     MDBDropdownToggle,
     MDBDropdownMenu,
-    MDBDropdownItem
-
+    MDBDropdownItem,
+    MDBCollapse,
 } from 'mdb-react-ui-kit';
 import 'mdb-react-ui-kit/dist/css/mdb.min.css';
 import logo from '../imgs/Logo.png';

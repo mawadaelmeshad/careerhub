@@ -8,14 +8,17 @@
   height: 1px;
   background: #eee;
 }
-.img-login{
-    width: 30rem;
-}
+
 .h-custom {
   height: calc(100% - 73px);
 }
 @media (max-width: 450px) {
   .h-custom {
   height: 100%;
+  }
+}
+@media (min-width: 992px) {
+  .img-login {
+      max-width: 80%; 
   }
 }
