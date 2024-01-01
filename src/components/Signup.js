@@ -18,30 +18,25 @@ import { useNavigate } from "react-router-dom";
 import swal from 'sweetalert';
 
 function Signup() {
+    const [name, setName] = useState("")
     const [mail, setMail] = useState("");
     const [password, setPassword] = useState("");
+    const [confirmation, setConfirmation] = useState(false);
     const navigate = useNavigate();
-    
-
-
-    const submit = (e)=>{
-        e.preventDefault()
-        axios.post('https://civet-top-actively.ngrok-free.app/api/login',{
-            
-            email:mail,
-            password,
-        })
-        .then(res =>
-            {  
-                if(res.data.is_admin === "0"){
-                    navigate("/")
-                    
-                }else if(res.data.is_admin === "1"){
-                    window.location.href = `http://localhost:3000?${res.data.token}`;
-                }
-            })
-            .catch(()=>swal("Email Or Password Is Incorrect"))
-        }
+  
+   
+  const submitt = (e)=>{
+    e.preventDefault()
+    axios.post('https://civet-top-actively.ngrok-free.app/api/register',{
+                    name,
+                    email : mail,
+                    password,
+                    password_confirmation : password,
+                    "ngrok-skip-browser-warning": "69420",
+    })
+    .then(()=>navigate("/signin"))
+    .catch(()=>swal("Email Already Exist"))
+}
     return (
         <MDBContainer fluid id='signup'>
 
@@ -49,7 +44,7 @@ function Signup() {
             <MDBCol lg='8' className='my-5'>
 
             <h2 class="text-white mb-4">Sign up</h2>
-            <form onSubmit={submit}>
+            <form onSubmit={submitt}>
             <MDBCard>
                 <MDBCardBody className='px-4'>
 
@@ -60,7 +55,7 @@ function Signup() {
                     </MDBCol>
 
                     <MDBCol md='9' className='pe-5'>
-                    <MDBInput label='Your name' size='lg' id='form1' type='text'/>
+                    <MDBInput label='Your name' size='lg' id='form1' type='text' required onChange={(e)=>setName(e.target.value)}/>
                     </MDBCol>
 
                 </MDBRow>
@@ -74,7 +69,7 @@ function Signup() {
                     </MDBCol>
 
                     <MDBCol md='9' className='pe-5'>
-                    <MDBInput label='example@example.com' size='lg' id='form2' type='email'/>
+                    <MDBInput label='example@example.com' size='lg' id='form2' type='email' required onChange={(e)=>setMail(e.target.value)}/>
                     </MDBCol>
 
                 </MDBRow>
@@ -88,7 +83,7 @@ function Signup() {
 </MDBCol>
 
 <MDBCol md='9' className='pe-5'>
-<MDBInput label='Password' size='lg' id='form2' type='password'/>
+<MDBInput label='Password' size='lg' id='form2' type='password' required onChange={(e)=>setPassword(e.target.value)}/>
 </MDBCol>
 
                 </MDBRow>
@@ -102,7 +97,7 @@ function Signup() {
 </MDBCol>
 
 <MDBCol md='9' className='pe-5'>
-<MDBInput label='Confirm Password' size='lg' id='form2' type='password'/>
+<MDBInput label='Confirm Password' size='lg' id='form2' type='password' required onChange={(e)=>setConfirmation(e.target.value)}/>
 </MDBCol>
 
                 </MDBRow>
