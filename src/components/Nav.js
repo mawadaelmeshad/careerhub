@@ -89,7 +89,7 @@ import 'mdb-react-ui-kit/dist/css/mdb.min.css';
                 <MDBContainer tag="form" fluid className='d-flex justify-content-end align-items-center'>
                     <MDBBtn outline color="info" className='me-2 btn-sign' type='button'>
                     <a href='#signin'>sign in</a></MDBBtn>
-                    <MDBBtn outline color="info" className='me-2 btn-sign' type='button'>Sign up
+                    <MDBBtn outline color="info" className='me-2 btn-sign' type='button'><a href='#signup'>sign up</a>
                     </MDBBtn>
                 </MDBContainer>
             </MDBCollapse>

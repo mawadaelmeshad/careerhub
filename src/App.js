@@ -3,6 +3,7 @@ import Nav from './components/Nav';
 import Home from './components/Home';
 import About from './components/About';
 import Signin from './components/Signin';
+import Signup from './components/Signup';
 import { Route, Routes } from 'react-router-dom';
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
         <Nav />
         <Home/>
         <Signin />
+        <Signup />
         </>
         }>
         </Route>
