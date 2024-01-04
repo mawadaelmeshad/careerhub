@@ -22,6 +22,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import 'mdb-react-ui-kit/dist/css/mdb.min.css';
+import { Link } from "react-router-dom";
 
 
 
@@ -86,8 +87,8 @@ import 'mdb-react-ui-kit/dist/css/mdb.min.css';
                 </MDBInputGroup> */}
                 <MDBContainer tag="form" fluid className='d-flex justify-content-end align-items-center'>
                     <MDBBtn outline color="info" className='me-2 btn-sign' type='button'>
-                    <a href='#signin'>sign in</a></MDBBtn>
-                    <MDBBtn outline color="info" className='me-2 btn-sign' type='button'><a href='#signup'>sign up</a>
+                    <Link to={'/signin'}>Sign in</Link></MDBBtn>
+                    <MDBBtn outline color="info" className='me-2 btn-sign' type='button'><Link to={'/signup'}>Sign up</Link>
                     </MDBBtn>
                 </MDBContainer>
             </MDBCollapse>
