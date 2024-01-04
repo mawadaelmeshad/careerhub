@@ -54,10 +54,10 @@ function Signin() {
                 <MDBBtn floating size='md' tag='a' className='me-2' style={{ color: 'white' }} onClick={()=>facebook()} >
                 <MDBIcon fab icon='facebook' />
                 </MDBBtn>
-                <button onClick={()=>google()}>sign with google</button>
-                <MDBBtn floating size='md' tag='a'  className='me-2' style={{ color: 'white' }} onClick={()=>google()}>
+                <button onClick={()=>google()}> sign with google</button>
+                {/* <MDBBtn floating size='md' tag='a'  className='me-2' style={{ color: 'white' }} onClick={()=>google()}>
                 <MDBIcon fab icon='google' />
-                </MDBBtn>
+                </MDBBtn> */}
 
 
             </div>
