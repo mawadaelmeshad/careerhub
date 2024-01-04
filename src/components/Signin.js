@@ -12,7 +12,7 @@ import swal from 'sweetalert';
 
 function Signin() {
   const google = ()=>{
-    window.open('https://civet-top-actively.ngrok-free.app/api/login/google',"_blank","width=400,height = 400,left=500,top=500")
+    window.open('https://civet-top-actively.ngrok-free.app/api/auth/google/redirect',"_blank","width=400,height = 400,left=500,top=500")
     
   }
   const facebook = ()=>{
