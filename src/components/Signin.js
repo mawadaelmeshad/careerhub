@@ -51,11 +51,11 @@ function Signin() {
 
                 <p className="lead fw-normal mb-0 me-3">Sign in with</p>
 
-                <MDBBtn floating size='md' tag='a' className='me-2' style={{ color: 'white' }}>
-                <MDBIcon fab icon='facebook' onClick={()=>facebook()} />
+                <MDBBtn floating size='md' tag='a' className='me-2' style={{ color: 'white' }} onClick={()=>facebook()} >
+                <MDBIcon fab icon='facebook' />
                 </MDBBtn>
-                <MDBBtn floating size='md' tag='a'  className='me-2' style={{ color: 'white' }}>
-                <MDBIcon fab icon='google' onClick={()=>google()}/>
+                <MDBBtn floating size='md' tag='a'  className='me-2' style={{ color: 'white' }} onClick={()=>google()}>
+                <MDBIcon fab icon='google' />
                 </MDBBtn>
 
 
