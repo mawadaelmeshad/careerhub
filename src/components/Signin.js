@@ -9,7 +9,13 @@ import swal from 'sweetalert';
 
 
 
+
 function Signin() {
+  const google = ()=>{
+    window.open('https://civet-top-actively.ngrok-free.app/api/login/google',"_blank","width=400,height = 400,left=500,top=500")
+    
+  }
+
     const [mail, setMail] = useState("");
     const [password, setPassword] = useState("");
     const navigate = useNavigate();
@@ -45,7 +51,7 @@ function Signin() {
                 <MDBIcon fab icon='facebook' />
                 </MDBBtn>
                 <MDBBtn floating size='md' tag='a'  className='me-2' style={{ color: 'white' }}>
-                <MDBIcon fab icon='google' />
+                <MDBIcon fab icon='google' onClick={()=>google()}/>
                 </MDBBtn>
 
 

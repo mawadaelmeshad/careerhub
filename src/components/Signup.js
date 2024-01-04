@@ -21,17 +21,12 @@ function Signup() {
     const [name, setName] = useState("")
     const [mail, setMail] = useState("");
     const [password, setPassword] = useState("");
-    const [confirmation, setConfirmation] = useState(false);
+    const [confirmation, setConfirmation] = useState("");
     const navigate = useNavigate();
   
    
   const submitt = (e)=>{
     e.preventDefault()
-    if (setPassword !== setConfirmation) {
-        // Display an error message or handle the mismatch
-        swal("Passwords do not match");
-        return; // Prevent further execution of the registration process
-    }
     axios.post('https://civet-top-actively.ngrok-free.app/api/register',{
                     name,
                     email : mail,
@@ -41,6 +36,11 @@ function Signup() {
     })
     .then(()=>navigate("/signin"))
     .catch(()=>swal("Email Already Exist"))
+    if (password !== confirmation) {
+        // Display an error message or handle the mismatch
+        swal("Passwords do not match");
+        return; // Prevent further execution of the registration process
+    }
 }
     return (
         <MDBContainer fluid id='signup'>
