@@ -50,10 +50,11 @@ function Signin() {
             <div className="d-flex flex-row align-items-center justify-content-center">
 
                 <p className="lead fw-normal mb-0 me-3">Sign in with</p>
-
+                 
                 <MDBBtn floating size='md' tag='a' className='me-2' style={{ color: 'white' }} onClick={()=>facebook()} >
                 <MDBIcon fab icon='facebook' />
                 </MDBBtn>
+                <button onClick={()=>google()}>sign with google</button>
                 <MDBBtn floating size='md' tag='a'  className='me-2' style={{ color: 'white' }} onClick={()=>google()}>
                 <MDBIcon fab icon='google' />
                 </MDBBtn>
