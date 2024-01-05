@@ -1,0 +1,13 @@
+.contact h2{
+    margin-top: 2.3rem;
+}
+.contact .centered-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 80vh; /* Adjust the height to your preference */
+    margin: 0 auto;
+    padding: 20px;
+}
+  

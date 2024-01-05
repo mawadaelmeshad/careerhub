@@ -1,6 +1,3 @@
-.nav{
-    color: rgb(0, 17, 255);
-}
 .logo{
     width: 3rem;
 }
@@ -8,6 +5,9 @@
     color:#5271FF;
     padding-left: 1rem;
 
+}
+.grey-word{
+    color: grey;
 }
 .btn-sign{
     border-color: #5271FF;

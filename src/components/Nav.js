@@ -33,7 +33,7 @@ import { Link } from "react-router-dom";
         <>
         <MDBNavbar sticky expand='lg' light bgColor='light' className='nav'>
             <MDBContainer fluid>
-            <MDBNavbarBrand href='#'className='logo-word'><img src={logo} alt='logo' className='logo' />CareerHub</MDBNavbarBrand>
+            <MDBNavbarBrand className='logo-word'><img src={logo} alt='logo' className='logo' /><Link to='./home'>CareerHub</Link></MDBNavbarBrand>
             <MDBNavbarToggler
                 aria-controls='navbarSupportedContent'
                 aria-expanded='false'
@@ -45,15 +45,15 @@ import { Link } from "react-router-dom";
                 <MDBCollapse navbar show={showBasic}>
                 <MDBNavbarNav className='justify-content-center  mb-2 mb-lg-0'>
                 <MDBNavbarItem>
-                    <MDBNavbarLink active aria-current='page' href='#'>
-                    Home
+                    <MDBNavbarLink active aria-current='page'><Link to='/home'>Home</Link>
+                
                     </MDBNavbarLink>
                 </MDBNavbarItem>
                 <MDBNavbarItem>
                     <MDBNavbarLink href='#'>Browse Jobs</MDBNavbarLink>
                 </MDBNavbarItem>
                 <MDBNavbarItem>
-                    <MDBNavbarLink href='#'>Contact</MDBNavbarLink>
+                    <MDBNavbarLink><Link to='/contact' className='grey-word'>Contact</Link></MDBNavbarLink>
                 </MDBNavbarItem>
                 <MDBNavbarItem>
                     <MDBDropdown>
