@@ -16,7 +16,7 @@ import {useState} from 'react'
 import axios from "axios"
 import { useNavigate } from "react-router-dom";
 import swal from 'sweetalert';
-
+import { Link } from "react-router-dom";
 function Signup() {
     const [name, setName] = useState("")
     const [mail, setMail] = useState("");
@@ -115,7 +115,7 @@ function Signup() {
                     </MDBCol>
 
                     <MDBCol md='9' className='pe-5'>
-                    <MDBFile size='lg' id='customFile' />
+                    <MDBFile size='lg' id='customFile' required />
                     <div className="small text-muted mt-2">Upload your CV/Resume or any other relevant file. Max file size 50 MB</div>
                     </MDBCol>
 
@@ -123,7 +123,7 @@ function Signup() {
 
                 <hr className="mx-n3" />
 
-                <MDBBtn className='my-4' size='lg'>Register</MDBBtn>
+                <Link to='/email_confirmation'><MDBBtn className='my-4' size='lg'>Register</MDBBtn></Link>
 
                 </MDBCardBody>
             </MDBCard>
