@@ -1,6 +1,7 @@
 .browse{
     justify-content: center;
     padding-top: 2rem;
+    padding-bottom: 2rem;
     background-color: #5271FF;
 }
 .browse .contain-cards{
@@ -15,7 +16,7 @@
     text-align: left;
 }
 .browse .card-title{
-    color:   #5271FF;
+    color: #5271FF;
     padding-bottom: 1.5rem;
 }
 /* .browse .icons{

@@ -2,6 +2,7 @@ import Card from 'react-bootstrap/Card';
 import './css-components/browse.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLocationDot , faChartSimple, faTabletButton } from '@fortawesome/free-solid-svg-icons';
+import browse from '../imgs/browse.jpeg';
 
 function Browse(){
     return(
