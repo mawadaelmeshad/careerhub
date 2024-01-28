@@ -24,8 +24,6 @@ import '@fortawesome/fontawesome-free/css/all.min.css';
 import 'mdb-react-ui-kit/dist/css/mdb.min.css';
 import { Link } from "react-router-dom";
 
-
-
     function Nav() {
         const [showBasic, setShowBasic] = useState(false);
 
@@ -50,12 +48,12 @@ import { Link } from "react-router-dom";
                     </MDBNavbarLink>
                 </MDBNavbarItem>
                 <MDBNavbarItem>
-                    <MDBNavbarLink href='#'>Browse Jobs</MDBNavbarLink>
+                    <MDBNavbarLink href='/browse'>Browse Jobs</MDBNavbarLink>
                 </MDBNavbarItem>
                 <MDBNavbarItem>
                     <MDBNavbarLink><Link to='/contact' className='grey-word'>Contact</Link></MDBNavbarLink>
                 </MDBNavbarItem>
-                <MDBNavbarItem>
+                {/* <MDBNavbarItem>
                     <MDBDropdown>
                 <MDBDropdownToggle tag='a' className='nav-link' role='button'>
                   pages
@@ -66,8 +64,8 @@ import { Link } from "react-router-dom";
                   <MDBDropdownItem link>Something else here</MDBDropdownItem>
                 </MDBDropdownMenu>
                 </MDBDropdown>
-                </MDBNavbarItem>
-                    <MDBNavbarItem>
+                </MDBNavbarItem> */}
+                    {/* <MDBNavbarItem>
                 <MDBDropdown>
                     <MDBDropdownToggle tag='a' className='nav-link' role='button'>
                     Blogs
@@ -78,18 +76,12 @@ import { Link } from "react-router-dom";
                     <MDBDropdownItem link>Something else here</MDBDropdownItem>
                     </MDBDropdownMenu>
                 </MDBDropdown>
-                </MDBNavbarItem>
+                </MDBNavbarItem> */}
 
                 </MDBNavbarNav>
-                {/* <MDBInputGroup tag="form" className='d-flex w-auto mb-3'>
-                <input className='form-control' placeholder="Type query" aria-label="Search" type='Search' />
-                <MDBBtn outline>Search</MDBBtn>
-                </MDBInputGroup> */}
                 <MDBContainer tag="form" fluid className='d-flex justify-content-end align-items-center'>
-                    <MDBBtn outline color="info" className='me-2 btn-sign' type='button'>
-                    <Link to={'/signin'}>Sign in</Link></MDBBtn>
-                    <MDBBtn outline color="info" className='me-2 btn-sign' type='button'><Link to={'/signup'}>Sign up</Link>
-                    </MDBBtn>
+                    <Link to={'/signin'}><MDBBtn outline color="info" className='me-2 btn-sign' type='button'>Sign in</MDBBtn></Link>
+                    <Link to={'/signup'}><MDBBtn outline color="info" className='me-2 btn-sign' type='button'>Sign up</MDBBtn></Link>
                 </MDBContainer>
             </MDBCollapse>
             </MDBContainer>

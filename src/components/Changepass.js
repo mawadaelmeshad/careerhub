@@ -17,26 +17,12 @@ import axios from "axios"
 import { useNavigate } from "react-router-dom";
 import swal from 'sweetalert';
 import { Link } from "react-router-dom";
-function Reset() {
+function Changepass() {
     const [name, setName] = useState("")
     const [mail, setMail] = useState("");
     const [password, setPassword] = useState("");
     const [confirmation, setConfirmation] = useState("");
     const navigate = useNavigate();
-    const pin = () => {
-        
-        <MDBRow className='align-items-center pt-4 pb-3'>
-
-        <MDBCol md='3' className='ps-5'>
-        <h6 className="mb-0">Email address</h6>
-        </MDBCol>
-        
-        <MDBCol md='9' className='pe-5'>
-        <MDBInput label='example@example.com' size='lg' id='form2' type='email' required onChange={(e)=>setMail(e.target.value)}/>
-        </MDBCol>
-        
-        </MDBRow>
-    }
 
   
    
@@ -46,7 +32,7 @@ function Reset() {
         <MDBRow className='d-flex justify-content-center align-items-center'>
             <MDBCol lg='8' className='my-5'>
 
-            <h2 class="text-white mb-4">Reset Password</h2>
+            <h2 class="text-white mb-4">Change Password</h2>
             <form>
             <MDBCard>
                 <MDBCardBody className='px-4'>
@@ -55,17 +41,28 @@ function Reset() {
                 <MDBRow className='align-items-center pt-4 pb-3'>
 
 <MDBCol md='3' className='ps-5'>
-<h6 className="mb-0">Email address</h6>
+<h6 className="mb-0">New Password</h6>
 </MDBCol>
 
 <MDBCol md='9' className='pe-5'>
-<MDBInput label='example@example.com' size='lg' id='form2' type='email' required onChange={(e)=>setMail(e.target.value)}/>
+<MDBInput label='New password' size='lg' id='form2' type='email' required onChange={(e)=>setMail(e.target.value)}/>
+</MDBCol>
+
+</MDBRow>
+<MDBRow className='align-items-center pt-4 pb-3'>
+
+<MDBCol md='3' className='ps-5'>
+<h6 className="mb-0">New password(again)</h6>
+</MDBCol>
+
+<MDBCol md='9' className='pe-5'>
+<MDBInput label='confirm password ' size='lg' id='form2' type='password' required onChange={(e)=>setMail(e.target.value)}/>
 </MDBCol>
 
 </MDBRow>
 
 
-               <MDBBtn className='my-4' size='lg' onClick={pin} >Submit</MDBBtn>
+               <MDBBtn className='my-4' size='lg' >Change Password</MDBBtn>
 
                 </MDBCardBody>
             </MDBCard>
@@ -81,4 +78,4 @@ function Reset() {
     );
 }
 
-export default Reset;
+export default Changepass;

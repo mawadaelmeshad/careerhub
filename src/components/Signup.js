@@ -23,7 +23,6 @@ function Signup() {
     const [password, setPassword] = useState("");
     const [confirmation, setConfirmation] = useState("");
     const navigate = useNavigate();
-  
    
   const submitt = (e)=>{
     e.preventDefault()

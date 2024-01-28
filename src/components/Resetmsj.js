@@ -17,63 +17,34 @@ import axios from "axios"
 import { useNavigate } from "react-router-dom";
 import swal from 'sweetalert';
 import { Link } from "react-router-dom";
-function Reset() {
+function Resetmsj() {
     const [name, setName] = useState("")
     const [mail, setMail] = useState("");
     const [password, setPassword] = useState("");
     const [confirmation, setConfirmation] = useState("");
     const navigate = useNavigate();
-    const pin = () => {
-        
-        <MDBRow className='align-items-center pt-4 pb-3'>
-
-        <MDBCol md='3' className='ps-5'>
-        <h6 className="mb-0">Email address</h6>
-        </MDBCol>
-        
-        <MDBCol md='9' className='pe-5'>
-        <MDBInput label='example@example.com' size='lg' id='form2' type='email' required onChange={(e)=>setMail(e.target.value)}/>
-        </MDBCol>
-        
-        </MDBRow>
-    }
-
-  
-   
     return (
         <MDBContainer fluid id='reset'>
 
         <MDBRow className='d-flex justify-content-center align-items-center'>
             <MDBCol lg='8' className='my-5'>
 
-            <h2 class="text-white mb-4">Reset Password</h2>
+            <h2 class="text-white mb-4">Password Reset</h2>
             <form>
             <MDBCard>
                 <MDBCardBody className='px-4'>
             
 
                 <MDBRow className='align-items-center pt-4 pb-3'>
-
-<MDBCol md='3' className='ps-5'>
-<h6 className="mb-0">Email address</h6>
-</MDBCol>
-
-<MDBCol md='9' className='pe-5'>
-<MDBInput label='example@example.com' size='lg' id='form2' type='email' required onChange={(e)=>setMail(e.target.value)}/>
-</MDBCol>
+                    <p>We have sent you an e-mail. Please contact us if you do not receive it within a few minutes</p>
 
 </MDBRow>
-
-
-               <MDBBtn className='my-4' size='lg' onClick={pin} >Submit</MDBBtn>
 
                 </MDBCardBody>
             </MDBCard>
 
                         
             </form>
-
-           
             </MDBCol>
         </MDBRow>
 
@@ -81,4 +52,4 @@ function Reset() {
     );
 }
 
-export default Reset;
+export default Resetmsj;

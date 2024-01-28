@@ -6,6 +6,12 @@ import Signup from './components/Signup';
 import Contact from './components/Contact'
 import { Route, Routes } from 'react-router-dom';
 import Email_confirmation from './components/Email_confirmation';
+import Reset from './components/Reset';
+import Changepass from './components/Changepass';
+import Resetmsj from './components/Resetmsj';
+import Browse from './components/Browse';
+
+
 
 function App() {
   return (
@@ -23,6 +29,13 @@ function App() {
         <Route path='/signup' element={<Signup />}></Route>
         <Route path='/home' element={<Home />}></Route>
         <Route path='/email_confirmation' element={<Email_confirmation />}></Route>
+        <Route path='/changepass' element={<Changepass />}></Route>
+        <Route path='/reset' element={<Reset />}></Route>
+        <Route path='/resetmsj' element={<Resetmsj />}></Route>
+        <Route path='/browse' element={<Browse />}></Route>
+        
+
+
 
 
         
