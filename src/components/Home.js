@@ -10,7 +10,7 @@ function Home(){
             <div className="words">
                 <p>4536+ Jobs listed</p>
                 <h2>Find your Dream Job</h2>
-                <p>We provide online instant cash loans with quick approval that suit your term length
+                <p>Empowering Dreams, Connecting Futures: Explore Opportunities with Us!
 
 </p>
             </div>
