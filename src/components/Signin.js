@@ -4,7 +4,7 @@ import './css-components/signin.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {useState} from 'react'
 import axios from "axios"
-import { useNavigate } from "react-router-dom";
+import { useNavigate , Link  } from "react-router-dom";
 import swal from 'sweetalert';
 
 
@@ -75,7 +75,7 @@ function Signin() {
 
                 <div className='text-center text-md-start mt-4 pt-2'>
                     <MDBBtn className="mb-0 px-5" size='lg' type='submit'>Login</MDBBtn>
-                    <p className="small fw-bold mt-2 pt-1 mb-2">Don't have an account? <a href="#signup" className="link-danger">Sign up</a></p>
+                    <p className="small fw-bold mt-2 pt-1 mb-2">Don't have an account? <Link to={'/signup'}  className="link-danger">Sign up</Link></p>
                     
                 </div>
             </form>

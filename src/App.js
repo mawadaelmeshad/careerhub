@@ -11,6 +11,8 @@ import Changepass from './components/Changepass';
 import Resetmsj from './components/Resetmsj';
 import Browse from './components/Browse';
 import Footer from './components/Footer';
+import Services from './components/Services';
+
 
 
 
@@ -23,6 +25,14 @@ function App() {
         <Route path='/' element={
         <>
         <Home/>
+        <Services />
+        </>
+        }>
+        </Route>
+        <Route path='/home' element={
+        <>
+        <Home/>
+        <Services />
         </>
         }>
         </Route>
@@ -30,6 +40,7 @@ function App() {
         <Route path='/signin' element={<Signin />}></Route>
         <Route path='/signup' element={<Signup />}></Route>
         <Route path='/home' element={<Home />}></Route>
+        <Route path='/services' element={<Services />}></Route>
         <Route path='/email_confirmation' element={<Email_confirmation />}></Route>
         <Route path='/changepass' element={<Changepass />}></Route>
         <Route path='/reset' element={<Reset />}></Route>

@@ -1,0 +1,30 @@
+.services{
+    margin-top: 2rem;
+}
+.services .contain-services{
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 5rem;
+}
+.services .icon-services{
+    color: #5271FF;
+    font-size: 2rem;
+}
+.services .card {
+    width: 15rem;
+    align-items: start;
+    text-align: left;
+    padding: 1rem;
+}
+.services .card h3{
+    font-size: 1rem;
+    padding-top: 1rem;
+    color: #5271FF;
+}
+.services .card p{
+    font-size: .9rem;
+    padding-top: 1rem;
+    color: #777;
+}

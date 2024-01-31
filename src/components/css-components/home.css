@@ -31,10 +31,13 @@
     font-size: 2.5rem;
 }
 @media( max-width : 650px){
+    .home .home-bg img{
+        height: 80vh;
+    }
     .home .words h2{
         font-size: 2.2rem;
     }
     .home .words{
-        top: 60%;
+        top: 58%;
     }
 }
