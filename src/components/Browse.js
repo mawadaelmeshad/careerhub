@@ -10,7 +10,7 @@ function Browse(){
             <h2 class="text-white mb-4">Popular Jobs</h2>
             <div className='container'>
             <div className='contain-cards'>
-                <Card style={{ width: '18rem' }}>
+                <Card style={{ width: '18rem' }} className="wow bounceInUp">
                     <Card.Body>
                         <Card.Title className='card-title'>Frontend developer</Card.Title>
                         <Card.Subtitle className="mb-2 text-muted icons"><FontAwesomeIcon icon={faLocationDot} className='icons' /> Mansoura</Card.Subtitle>
@@ -23,9 +23,9 @@ function Browse(){
                 <Card style={{ width: '18rem' }}>
                     <Card.Body>
                         <Card.Title className='card-title'>Backend developer</Card.Title>
-                        <Card.Subtitle className="mb-2 text-muted"><FontAwesomeIcon icon={faLocationDot} /> Remote</Card.Subtitle>
-                        <Card.Subtitle className="mb-2 text-muted"><FontAwesomeIcon icon={faChartSimple} /> Junior</Card.Subtitle>
-                        <Card.Subtitle className="mb-2 text-muted"><FontAwesomeIcon icon={faTabletButton} /> Development</Card.Subtitle>
+                        <Card.Subtitle className="mb-2 text-muted"><FontAwesomeIcon icon={faLocationDot} className='icons' /> Remote</Card.Subtitle>
+                        <Card.Subtitle className="mb-2 text-muted"><FontAwesomeIcon icon={faChartSimple} className='icons' /> Junior</Card.Subtitle>
+                        <Card.Subtitle className="mb-2 text-muted"><FontAwesomeIcon icon={faTabletButton} className='icons' /> Development</Card.Subtitle>
                         <Card.Link href="#">Apply Now</Card.Link>
                     </Card.Body>
                 </Card>
@@ -33,9 +33,9 @@ function Browse(){
                 <Card style={{ width: '18rem' }}>
                     <Card.Body>
                         <Card.Title className='card-title'>Content Writer</Card.Title>
-                        <Card.Subtitle className="mb-2 text-muted"><FontAwesomeIcon icon={faLocationDot} /> Cairo</Card.Subtitle>
-                        <Card.Subtitle className="mb-2 text-muted"><FontAwesomeIcon icon={faChartSimple} /> Senior</Card.Subtitle>
-                        <Card.Subtitle className="mb-2 text-muted"><FontAwesomeIcon icon={faTabletButton} /> Writing</Card.Subtitle>
+                        <Card.Subtitle className="mb-2 text-muted"><FontAwesomeIcon icon={faLocationDot} className='icons' /> Cairo</Card.Subtitle>
+                        <Card.Subtitle className="mb-2 text-muted"><FontAwesomeIcon icon={faChartSimple} className='icons' /> Senior</Card.Subtitle>
+                        <Card.Subtitle className="mb-2 text-muted"><FontAwesomeIcon icon={faTabletButton} className='icons' /> Writing</Card.Subtitle>
                         <Card.Link href="#">Apply Now</Card.Link>
                     </Card.Body>
                 </Card>
@@ -43,9 +43,9 @@ function Browse(){
                 <Card style={{ width: '18rem' }}>
                     <Card.Body>
                         <Card.Title className='card-title'>Frontend developer</Card.Title>
-                        <Card.Subtitle className="mb-2 text-muted"><FontAwesomeIcon icon={faLocationDot} /> Mansoura</Card.Subtitle>
-                        <Card.Subtitle className="mb-2 text-muted"><FontAwesomeIcon icon={faChartSimple} /> Senior</Card.Subtitle>
-                        <Card.Subtitle className="mb-2 text-muted"><FontAwesomeIcon icon={faTabletButton} /> Development</Card.Subtitle>
+                        <Card.Subtitle className="mb-2 text-muted"><FontAwesomeIcon icon={faLocationDot} className='icons' /> Mansoura</Card.Subtitle>
+                        <Card.Subtitle className="mb-2 text-muted"><FontAwesomeIcon icon={faChartSimple} className='icons' /> Senior</Card.Subtitle>
+                        <Card.Subtitle className="mb-2 text-muted"><FontAwesomeIcon icon={faTabletButton} className='icons' /> Development</Card.Subtitle>
                         <Card.Link href="#">Apply Now</Card.Link>
                     </Card.Body>
                 </Card>
@@ -53,9 +53,9 @@ function Browse(){
                 <Card style={{ width: '18rem' }}>
                     <Card.Body>
                         <Card.Title className='card-title'>Frontend developer</Card.Title>
-                        <Card.Subtitle className="mb-2 text-muted"><FontAwesomeIcon icon={faLocationDot} /> Mansoura</Card.Subtitle>
-                        <Card.Subtitle className="mb-2 text-muted"><FontAwesomeIcon icon={faChartSimple} /> Senior</Card.Subtitle>
-                        <Card.Subtitle className="mb-2 text-muted"><FontAwesomeIcon icon={faTabletButton} /> Development</Card.Subtitle>
+                        <Card.Subtitle className="mb-2 text-muted"><FontAwesomeIcon icon={faLocationDot} className='icons' /> Mansoura</Card.Subtitle>
+                        <Card.Subtitle className="mb-2 text-muted"><FontAwesomeIcon icon={faChartSimple} className='icons' /> Senior</Card.Subtitle>
+                        <Card.Subtitle className="mb-2 text-muted"><FontAwesomeIcon icon={faTabletButton} className='icons' /> Development</Card.Subtitle>
                         <Card.Link href="#">Apply Now</Card.Link>
                     </Card.Body>
                 </Card>
@@ -63,9 +63,9 @@ function Browse(){
                 <Card style={{ width: '18rem' }}>
                     <Card.Body>
                         <Card.Title className='card-title'>Frontend developer</Card.Title>
-                        <Card.Subtitle className="mb-2 text-muted"><FontAwesomeIcon icon={faLocationDot} /> Mansoura</Card.Subtitle>
-                        <Card.Subtitle className="mb-2 text-muted"><FontAwesomeIcon icon={faChartSimple} /> Senior</Card.Subtitle>
-                        <Card.Subtitle className="mb-2 text-muted"><FontAwesomeIcon icon={faTabletButton} /> Development</Card.Subtitle>
+                        <Card.Subtitle className="mb-2 text-muted"><FontAwesomeIcon icon={faLocationDot} className='icons' /> Mansoura</Card.Subtitle>
+                        <Card.Subtitle className="mb-2 text-muted"><FontAwesomeIcon icon={faChartSimple} className='icons' /> Senior</Card.Subtitle>
+                        <Card.Subtitle className="mb-2 text-muted"><FontAwesomeIcon icon={faTabletButton} className='icons' /> Development</Card.Subtitle>
                         <Card.Link href="#">Apply Now</Card.Link>
                     </Card.Body>
                 </Card>
@@ -73,18 +73,18 @@ function Browse(){
                 <Card style={{ width: '18rem' }}>
                     <Card.Body>
                         <Card.Title className='card-title'>Frontend developer</Card.Title>
-                        <Card.Subtitle className="mb-2 text-muted"><FontAwesomeIcon icon={faLocationDot} /> Mansoura</Card.Subtitle>
-                        <Card.Subtitle className="mb-2 text-muted"><FontAwesomeIcon icon={faChartSimple} /> Senior</Card.Subtitle>
-                        <Card.Subtitle className="mb-2 text-muted"><FontAwesomeIcon icon={faTabletButton} /> Development</Card.Subtitle>
+                        <Card.Subtitle className="mb-2 text-muted"><FontAwesomeIcon icon={faLocationDot} className='icons' /> Mansoura</Card.Subtitle>
+                        <Card.Subtitle className="mb-2 text-muted"><FontAwesomeIcon icon={faChartSimple} className='icons' /> Senior</Card.Subtitle>
+                        <Card.Subtitle className="mb-2 text-muted"><FontAwesomeIcon icon={faTabletButton} className='icons' /> Development</Card.Subtitle>
                         <Card.Link href="#">Apply Now</Card.Link>
                     </Card.Body>
                 </Card>
                 <Card style={{ width: '18rem' }}>
                     <Card.Body>
                         <Card.Title className='card-title'>Frontend developer</Card.Title>
-                        <Card.Subtitle className="mb-2 text-muted"><FontAwesomeIcon icon={faLocationDot} /> Mansoura</Card.Subtitle>
-                        <Card.Subtitle className="mb-2 text-muted"><FontAwesomeIcon icon={faChartSimple} /> Senior</Card.Subtitle>
-                        <Card.Subtitle className="mb-2 text-muted"><FontAwesomeIcon icon={faTabletButton} /> Development</Card.Subtitle>
+                        <Card.Subtitle className="mb-2 text-muted"><FontAwesomeIcon icon={faLocationDot} className='icons' /> Mansoura</Card.Subtitle>
+                        <Card.Subtitle className="mb-2 text-muted"><FontAwesomeIcon icon={faChartSimple} className='icons' /> Senior</Card.Subtitle>
+                        <Card.Subtitle className="mb-2 text-muted"><FontAwesomeIcon icon={faTabletButton} className='icons' /> Development</Card.Subtitle>
                         <Card.Link href="#">Apply Now</Card.Link>
                     </Card.Body>
                 </Card>

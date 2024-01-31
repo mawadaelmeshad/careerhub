@@ -10,6 +10,8 @@ import Reset from './components/Reset';
 import Changepass from './components/Changepass';
 import Resetmsj from './components/Resetmsj';
 import Browse from './components/Browse';
+import Footer from './components/Footer';
+
 
 
 
@@ -40,6 +42,7 @@ function App() {
 
         
       </Routes>
+      <Footer />
     </div>
   );
 }
