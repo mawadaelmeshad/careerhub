@@ -4,7 +4,7 @@ import './css-components/services.css';
 function Services(){
 
     return(
-        <div className="services">
+        <div className='services wow bounceInLeft' data-wow-duration="1.5s" data-wow-delay=".3s">
             <div className="container contain-services">
                 <div className="card">
                 <FontAwesomeIcon icon={faUsers} className='icon-services' />

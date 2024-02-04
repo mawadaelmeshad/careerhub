@@ -121,8 +121,7 @@ function Signup() {
                 </MDBRow>
 
                 <hr className="mx-n3" />
-                <input type="submit" className="submit" value="Sign up" />
-                <Link to='/email_confirmation'><MDBBtn className='my-4' size='lg'>Register</MDBBtn></Link>
+                <MDBBtn className='my-4' size='lg' type='submit'>Register</MDBBtn>
 
                 </MDBCardBody>
             </MDBCard>
