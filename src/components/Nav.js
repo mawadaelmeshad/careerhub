@@ -25,22 +25,21 @@ import 'mdb-react-ui-kit/dist/css/mdb.min.css';
 import { Link } from "react-router-dom";
 
     function Nav() {
-        const [showBasic, setShowBasic] = useState(false);
-
+        const [openBasic, setOpenBasic] = useState(false);
     return (
         <>
         <MDBNavbar sticky expand='lg' light bgColor='light' className='nav'>
             <MDBContainer fluid>
             <MDBNavbarBrand className='logo-word'><img src={logo} alt='logo' className='logo' /><Link to='./home'>CareerHub</Link></MDBNavbarBrand>
             <MDBNavbarToggler
-                aria-controls='navbarSupportedContent'
-                aria-expanded='false'
-                aria-label='Toggle navigation'
-                onClick={() => setShowBasic(!showBasic)}
-                >
-                    <FontAwesomeIcon icon={faBars} style={{ color: '#5271FF', fontSize: '1.9rem' }} />
-                </MDBNavbarToggler>
-                <MDBCollapse navbar show={showBasic}>
+            aria-controls='navbarSupportedContent'
+            aria-expanded='false'
+            aria-label='Toggle navigation'
+            onClick={() => setOpenBasic(!openBasic)}
+            >
+            <MDBIcon icon='bars' fas className='menu-icon'/>
+        </MDBNavbarToggler>
+                <MDBCollapse navbar open={openBasic}>
                 <MDBNavbarNav className='justify-content-center  mb-2 mb-lg-0'>
                 <MDBNavbarItem>
                     <MDBNavbarLink active aria-current='page'><Link to='/home'>Home</Link>
