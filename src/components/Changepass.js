@@ -24,8 +24,6 @@ function Changepass() {
     const [confirmation, setConfirmation] = useState("");
     const navigate = useNavigate();
 
-  
-   
     return (
         <MDBContainer fluid id='reset'>
 

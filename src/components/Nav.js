@@ -51,7 +51,7 @@ import { Link } from "react-router-dom";
                     <MDBNavbarLink href='/browse'>Browse Jobs</MDBNavbarLink>
                 </MDBNavbarItem>
                 <MDBNavbarItem>
-                    <MDBNavbarLink><Link to='/contact' className='grey-word'>Contact</Link></MDBNavbarLink>
+                    <MDBNavbarLink href='/contact'>Contact</MDBNavbarLink>
                 </MDBNavbarItem>
                 {/* <MDBNavbarItem>
                     <MDBDropdown>

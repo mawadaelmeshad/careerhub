@@ -12,10 +12,9 @@
 }
 .home .home-bg img{
     position: relative;
-    width: 100%;
+    width: 85rem;
     background-size: cover;
-    filter: brightness(23%);
-    min-height: fit-content;
+    filter: brightness(28%);
     height: 100vh;
 }
 .home .words{
@@ -32,7 +31,8 @@
 }
 @media( max-width : 650px){
     .home .home-bg img{
-        height: 80vh;
+        height: 100vh;
+        /* width: 50rem; */
     }
     .home .words h2{
         font-size: 2.2rem;

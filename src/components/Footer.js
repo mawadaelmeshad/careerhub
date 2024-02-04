@@ -55,10 +55,7 @@ function Footer() {
         </MDBContainer>
 
         <div className='text-center p-3 ' style={{ backgroundColor: '#5271FF' }}>
-            © 2024 Copyright: 
-            <a className='text-white' href='https://mdbootstrap.com/'>
-            Mawadah Elmashad & Islam Walied
-            </a>
+            © 2024 Copyright: <span>Mawadah Elmashad & Islam Walied</span>
         </div>
         </MDBFooter>
     );
