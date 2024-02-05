@@ -88,7 +88,6 @@ function Browse(){
                             <Card.Link href="#">Apply Now</Card.Link>
                         </Card.Body>
                     </Card>
-
                 </div>
             </div>
         </div>

@@ -35,16 +35,16 @@ function Reset() {
                 <form onSubmit={submit}>
                 <MDBCard>
                     <MDBCardBody className='px-4'>
-                    <MDBRow className='align-items-center pt-4 pb-3'>
-                        <MDBCol md='3' className='ps-5'>
-                        <h6 className="mb-0">Email address</h6>
-                        </MDBCol>
-                        <MDBCol md='9' className='pe-5'>
-                        <MDBInput label='example@example.com' size='lg' id='form2' type='email' required onChange={(e)=>setMail(e.target.value)}/>
-                        </MDBCol>
-                    </MDBRow>
-                    <MDBBtn className='my-4' size='lg' type='submit' >Send pin
-                    </MDBBtn>
+                        <MDBRow className='align-items-center pt-4 pb-3'>
+                            <MDBCol md='3' className='ps-5'>
+                            <h6 className="mb-0">Email address</h6>
+                            </MDBCol>
+                            <MDBCol md='9' className='pe-5'>
+                            <MDBInput label='example@example.com' size='lg' id='form2' type='email' required onChange={(e)=>setMail(e.target.value)}/>
+                            </MDBCol>
+                        </MDBRow>
+                        <MDBBtn className='my-4' size='lg' type='submit' >Send pin
+                        </MDBBtn>
                     </MDBCardBody>
                 </MDBCard>          
                 </form>
