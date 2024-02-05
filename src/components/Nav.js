@@ -78,7 +78,7 @@ import { Link } from "react-router-dom";
                 </MDBNavbarItem> */}
 
                 </MDBNavbarNav>
-                <MDBContainer tag="form" fluid className='d-flex justify-content-end align-items-center'>
+                <MDBContainer tag="form" fluid className='d-flex justify-content-end align-items-center '>
                     <Link to={'/signin'}><MDBBtn outline color="info" className='me-2 btn-sign' type='button'>Sign in</MDBBtn></Link>
                     <Link to={'/signup'}><MDBBtn outline color="info" className='me-2 btn-sign' type='button'>Sign up</MDBBtn></Link>
                 </MDBContainer>

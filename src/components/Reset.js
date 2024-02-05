@@ -8,8 +8,6 @@ import {
     MDBCard,
     MDBCardBody,
     MDBInput,
-    MDBTextArea,
-    MDBFile
 }
 from 'mdb-react-ui-kit';
 import {useState} from 'react'
@@ -18,65 +16,40 @@ import { useNavigate } from "react-router-dom";
 import swal from 'sweetalert';
 import { Link } from "react-router-dom";
 function Reset() {
-    const [name, setName] = useState("")
     const [mail, setMail] = useState("");
-    const [password, setPassword] = useState("");
-    const [confirmation, setConfirmation] = useState("");
     const navigate = useNavigate();
-    const pin = () => {
-        
-        <MDBRow className='align-items-center pt-4 pb-3'>
-
-        <MDBCol md='3' className='ps-5'>
-        <h6 className="mb-0">Email address</h6>
-        </MDBCol>
-        
-        <MDBCol md='9' className='pe-5'>
-        <MDBInput label='example@example.com' size='lg' id='form2' type='email' required onChange={(e)=>setMail(e.target.value)}/>
-        </MDBCol>
-        
-        </MDBRow>
-    }
-
-  
-   
+    const submit = (e)=>{
+        e.preventDefault()
+        axios.post('https://civet-top-actively.ngrok-free.app/api/forgot-password',{
+            
+            email:mail,
+        })
+        .then(()=>navigate("/resetmsj"))
+            .catch(()=>swal("Sorry , email is incorrect!"))
+        }
     return (
         <MDBContainer fluid id='reset'>
-
-        <MDBRow className='d-flex justify-content-center align-items-center'>
-            <MDBCol lg='8' className='my-5'>
-
-            <h2 class="text-white mb-4">Reset Password</h2>
-            <form>
-            <MDBCard>
-                <MDBCardBody className='px-4'>
-            
-
-                <MDBRow className='align-items-center pt-4 pb-3'>
-
-<MDBCol md='3' className='ps-5'>
-<h6 className="mb-0">Email address</h6>
-</MDBCol>
-
-<MDBCol md='9' className='pe-5'>
-<MDBInput label='example@example.com' size='lg' id='form2' type='email' required onChange={(e)=>setMail(e.target.value)}/>
-</MDBCol>
-
-</MDBRow>
-
-
-               <MDBBtn className='my-4' size='lg' onClick={pin} >Submit</MDBBtn>
-
-                </MDBCardBody>
-            </MDBCard>
-
-                        
-            </form>
-
-           
-            </MDBCol>
-        </MDBRow>
-
+            <MDBRow className='d-flex justify-content-center align-items-center'>
+                <MDBCol lg='8' className='my-5'>
+                <h2 class="text-white mb-4">Reset Password</h2>
+                <form onSubmit={submit}>
+                <MDBCard>
+                    <MDBCardBody className='px-4'>
+                    <MDBRow className='align-items-center pt-4 pb-3'>
+                        <MDBCol md='3' className='ps-5'>
+                        <h6 className="mb-0">Email address</h6>
+                        </MDBCol>
+                        <MDBCol md='9' className='pe-5'>
+                        <MDBInput label='example@example.com' size='lg' id='form2' type='email' required onChange={(e)=>setMail(e.target.value)}/>
+                        </MDBCol>
+                    </MDBRow>
+                    <MDBBtn className='my-4' size='lg' type='submit' >Send pin
+                    </MDBBtn>
+                    </MDBCardBody>
+                </MDBCard>          
+                </form>
+                </MDBCol>
+            </MDBRow>
         </MDBContainer>
     );
 }

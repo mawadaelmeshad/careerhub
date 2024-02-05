@@ -41,17 +41,12 @@ function App() {
         <Route path='/signup' element={<Signup />}></Route>
         <Route path='/home' element={<Home />}></Route>
         <Route path='/services' element={<Services />}></Route>
-        <Route path='/email_confirmation' element={<Email_confirmation />}></Route>
+        <Route path='/email_confirmation' element={<Email_confirmation />}>
+        </Route>
         <Route path='/changepass' element={<Changepass />}></Route>
         <Route path='/reset' element={<Reset />}></Route>
         <Route path='/resetmsj' element={<Resetmsj />}></Route>
         <Route path='/browse' element={<Browse />}></Route>
-        
-
-
-
-
-        
       </Routes>
       <Footer />
     </div>

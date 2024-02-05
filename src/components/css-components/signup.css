@@ -4,3 +4,11 @@
 .white_word{
   color: white;
 }
+.submit-btn{
+  background-color: #5271FF;
+}
+@media(max-width:768px){
+  h6{
+    visibility: hidden;
+  }
+}

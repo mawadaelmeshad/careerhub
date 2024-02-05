@@ -17,6 +17,11 @@
   height: 100%;
   }
 }
+@media(max-width:768px){
+  h6{
+    visibility: hidden;
+  }
+}
 @media (min-width: 992px) {
   .img-login {
       max-width: 80%; 
