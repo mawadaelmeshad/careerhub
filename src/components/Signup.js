@@ -31,7 +31,7 @@ function Signup() {
                     password_confirmation: confirmation,
                     "ngrok-skip-browser-warning": "69420",
     })
-    .then(()=>navigate("/email_confirmation"))
+    .then(()=>navigate("/pinconfirm"))
     .catch(()=>swal("Email Already Exist"))
     if (password !== confirmation) {
         // Display an error message or handle the mismatch

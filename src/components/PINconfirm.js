@@ -7,6 +7,7 @@ import {
     MDBCol,
     MDBCard,
     MDBCardBody,
+    MDBInput,
 }
 from 'mdb-react-ui-kit';
 import {useState} from 'react'
@@ -19,12 +20,17 @@ function PINconfirm() {
     const navigate = useNavigate();
     const submit = (e)=>{
         e.preventDefault()
-        axios.post('https://civet-top-actively.ngrok-free.app/api/verify/pin',{
-            PIN:PIN,
+        axios.post('https://civet-top-actively.ngrok-free.app/api/email/verify',{
+            token:PIN
         })
-        .then(()=>navigate("/resetmsj"))
-            .catch(()=>swal("PIN is incorrect!"))
-        }
+        .then(() => {
+            navigate("/home");
+            swal("Thank you for confirming your mail");
+            })
+            .catch(() => {
+                swal("PIN is incorrect!");
+            });
+            };
     const props = {
         inputStyle: {
             fontFamily: 'monospace',
@@ -64,8 +70,9 @@ function PINconfirm() {
                         <MDBCardBody className='px-4'>
                             <MDBRow className='align-items-center pt-4 pb-3'>
                                 <p>We have sent you an e-mail, please write the PIN</p>
-                                <ReactCodeInput type='number'
-                            fields={6} {...props} required  onChange={(value) => setPIN(value)}/>
+                                {/* <ReactCodeInput type='number'
+                            fields={6} {...props} required  onChange={(value) => setPIN(value)}/> */}
+                            <MDBInput type='number' label='PIN'  wrapperClass='mb-4' required onChange={(e)=>setPIN(e.target.value)}/>
                             </MDBRow>
                             <MDBBtn className='my-4 submit-btn' size='lg' type='submit'>Submit
                             </MDBBtn>

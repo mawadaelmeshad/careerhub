@@ -27,6 +27,7 @@ function Reset() {
         .then(()=>navigate("/resetmsj"))
             .catch(()=>swal("Sorry , email is incorrect!"))
         }
+        
     return (
         <MDBContainer fluid id='reset'>
             <MDBRow className='d-flex justify-content-center align-items-center'>
