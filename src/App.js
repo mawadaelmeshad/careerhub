@@ -12,6 +12,8 @@ import Resetmsj from './components/Resetmsj';
 import Browse from './components/Browse';
 import Footer from './components/Footer';
 import Services from './components/Services';
+import PINconfirm from './components/PINconfirm';
+
 
 
 
@@ -47,6 +49,8 @@ function App() {
         <Route path='/reset' element={<Reset />}></Route>
         <Route path='/resetmsj' element={<Resetmsj />}></Route>
         <Route path='/browse' element={<Browse />}></Route>
+        <Route path='/pinconfirm' element={<PINconfirm />}></Route>
+
       </Routes>
       <Footer />
     </div>

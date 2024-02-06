@@ -1,9 +1,19 @@
-.email_confirmation{
-    text-align: left;
-    margin-left: 2rem;
-    margin-right: 2rem;
-}
 .p_confirm{
     margin-top: 4rem;
     font-size: 1.2rem;
+}
+.email-confirmation {
+    background-color: #5271FF;
+    height: 90vh;
+}
+.white_word{
+    color: white;
+}
+.submit-btn{
+    background-color: #5271FF;
+}
+@media(max-width:768px){
+    h6{
+        visibility: hidden;
+    }
 }

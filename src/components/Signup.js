@@ -13,7 +13,7 @@ import {
 from 'mdb-react-ui-kit';
 import {useState} from 'react'
 import axios from "axios"
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import swal from 'sweetalert';
 
 function Signup() {
@@ -31,7 +31,7 @@ function Signup() {
                     password_confirmation: confirmation,
                     "ngrok-skip-browser-warning": "69420",
     })
-    .then(()=>navigate("/signin"))
+    .then(()=>navigate("/email_confirmation"))
     .catch(()=>swal("Email Already Exist"))
     if (password !== confirmation) {
         // Display an error message or handle the mismatch
@@ -94,7 +94,7 @@ function Signup() {
                                 </MDBCol>
                             </MDBRow>
                             <hr className="mx-n3" />
-                            <MDBBtn className='my-4 submit-btn' size='lg' type='submit'>Register</MDBBtn>
+                                <MDBBtn className='my-4 submit-btn' size='lg' type='submit'>Register</MDBBtn>
                             </MDBCardBody>
                         </MDBCard>      
                     </form>

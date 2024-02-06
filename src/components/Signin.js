@@ -14,6 +14,7 @@ function Signin() {
     window.open('https://civet-top-actively.ngrok-free.app/api/login/google',"_blank","width=400,height = 400,left=500,top=500")
     
   }
+  const [isLoggedin, setIsLoggedin] = useState(false);
     const [mail, setMail] = useState("");
     const [password, setPassword] = useState("");
     const navigate = useNavigate();
