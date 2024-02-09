@@ -13,10 +13,8 @@ import Browse from './components/Browse';
 import Footer from './components/Footer';
 import Services from './components/Services';
 import PINconfirm from './components/PINconfirm';
-
-
-
-
+import Profile from './components/Profile';
+import Updateprofile from './components/Updateprofile';
 
 
 function App() {
@@ -50,6 +48,10 @@ function App() {
         <Route path='/resetmsj' element={<Resetmsj />}></Route>
         <Route path='/browse' element={<Browse />}></Route>
         <Route path='/pinconfirm' element={<PINconfirm />}></Route>
+        <Route path='/profile' element={<Profile/>}></Route>
+        <Route path='/updateprofile' element={<Updateprofile/>}></Route>
+
+
 
       </Routes>
       <Footer />

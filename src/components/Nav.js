@@ -23,6 +23,7 @@ import { faBars } from '@fortawesome/free-solid-svg-icons';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import 'mdb-react-ui-kit/dist/css/mdb.min.css';
 import { Link } from "react-router-dom";
+import 'react-bootstrap';
 
     function Nav() {
         const [openBasic, setOpenBasic] = useState(false);
@@ -78,7 +79,7 @@ import { Link } from "react-router-dom";
                 </MDBNavbarItem> */}
 
                 </MDBNavbarNav>
-                <MDBContainer tag="form" fluid className='d-flex justify-content-end align-items-center '>
+                <MDBContainer tag="form" fluid className='d-flex justify-content-center justify-content-lg-end'>
                     <Link to={'/signin'}><MDBBtn outline color="info" className='me-2 btn-sign' type='button'>Sign in</MDBBtn></Link>
                     <Link to={'/signup'}><MDBBtn outline color="info" className='me-2 btn-sign' type='button'>Sign up</MDBBtn></Link>
                 </MDBContainer>
