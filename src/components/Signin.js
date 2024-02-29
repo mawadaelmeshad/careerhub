@@ -6,6 +6,9 @@ import axios from "axios"
 import { useNavigate , Link  } from "react-router-dom";
 import swal from 'sweetalert';
 function Signin() {
+  const date = new Date();
+  const month = date.toLocaleString('default', { month: 'long' }).slice(0, 3);
+  console.log(month)
   const google = ()=>{
     window.open('https://civet-top-actively.ngrok-free.app/api/auth/google/redirect',"_blank","width=400,height = 400,left=500,top=500")
     
@@ -14,7 +17,6 @@ function Signin() {
     window.open('https://civet-top-actively.ngrok-free.app/api/login/google',"_blank","width=400,height = 400,left=500,top=500")
     
   }
-  const [isLoggedin, setIsLoggedin] = useState(false);
     const [mail, setMail] = useState("");
     const [password, setPassword] = useState("");
     const navigate = useNavigate();
@@ -24,7 +26,11 @@ function Signin() {
             email:mail,
             password,
         })
-        .then(()=>navigate("/home"))
+        .then(result =>{
+          console.log(result.data.data)
+          window.location.href = '/home';
+          localStorage.setItem('token', result.data.data.token)
+        })
             .catch(()=>swal("Sorry , email or password is incorrect!"))
         }
   return (
@@ -40,18 +46,17 @@ function Signin() {
                   <MDBIcon fab icon='facebook' />
                   </MDBBtn>
                   <MDBBtn floating size='md' tag='a'  className='me-2' style={{ color: 'white' }} onClick={()=>google()}>
-                  <MDBIcon fab icon='google' />
+                  <MDBIcon fab icon='github' />
                   </MDBBtn>
               </div>
               <div className="divider d-flex align-items-center my-4">
                   <p className="text-center fw-bold mx-3 mb-0">Or</p>
               </div>
               <form onSubmit={submit}>
-                  <MDBInput wrapperClass='mb-4' label='Email address' id='formControlLg' type='email' size="lg" onChange={(e)=>setMail(e.target.value)}/>
-                  <MDBInput wrapperClass='mb-4' label='Password' id='formControlLg' type='password' size="lg" onChange={(e)=>setPassword(e.target.value)}/>
+                  <MDBInput wrapperClass='mb-4' label='Email address' id='formControlLg' type='email' size="lg" required onChange={(e)=>setMail(e.target.value)}/>
+                  <MDBInput wrapperClass='mb-4' label='Password' id='formControlLg' type='password' size="lg" required onChange={(e)=>setPassword(e.target.value)}/>
 
                   <div className="d-flex justify-content-between mb-4">
-                      <MDBCheckbox name='flexCheck' value='' id='flexCheckDefault' label='Remember me' />
                       <a href="/reset">Forgot password?</a>
                   </div>
 

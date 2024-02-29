@@ -31,10 +31,10 @@ function Contact() {
       <form id='form' className='text-center centered-form' style={{ width: '100%', maxWidth: '500px' }} onSubmit={submitt}>
           {/* <MDBInput label='Name' v-model='name' wrapperClass='mb-4' required onChange={(e)=>setName(e.target.value)}/> */}
 
-          <MDBInput type='email' label='Email address' v-model='email' wrapperClass='mb-4' required onChange={(e)=>setMail(e.target.value)}/>
+          <MDBInput type='email' label='Email address' v-model='email' wrapperClass='mb-4' required onChange={(e)=>setMail(e.target.value)} className='white-input'/>
 
           {/* <MDBInput label='Subject' v-model='subject' wrapperClass='mb-4' required onChange={(e)=>setSubject(e.target.value)} /> */}
-          <MDBInput type='text' label='description'  wrapperClass='mb-4' required onChange={(e)=>setMsj(e.target.value)}/>
+          <MDBInput type='text' label='description'  wrapperClass='mb-4' required onChange={(e)=>setMsj(e.target.value)} className='white-input'/>
           {/* <MDBTextArea wrapperClass='mb-4' label='Message'  required onChange={(e)=>setMsj(e.target.value)}/> */}
 
           {/* <MDBCheckbox wrapperClass='d-flex justify-content-center' label='Send me copy' /> */}

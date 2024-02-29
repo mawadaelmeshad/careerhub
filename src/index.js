@@ -5,11 +5,12 @@ import App from './App';
 import { BrowserRouter } from 'react-router-dom';
 import reportWebVitals from './reportWebVitals';
 import 'wowjs/css/libs/animate.css';
-
+import {AuthWrapper} from './auth/AuthWrapper'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <BrowserRouter>
+  <AuthWrapper/>
       <App />
   </BrowserRouter>
 );

@@ -15,7 +15,6 @@ import {useState} from 'react'
 import axios from "axios"
 import { Link, useNavigate } from "react-router-dom";
 import swal from 'sweetalert';
-
 function Signup() {
     const [name, setName] = useState("")
     const [mail, setMail] = useState("");
@@ -25,18 +24,21 @@ function Signup() {
     const submitt = (e)=>{
     e.preventDefault()
     axios.post('https://civet-top-actively.ngrok-free.app/api/register',{
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'},
                     name,
                     email : mail,
                     password,
                     password_confirmation: confirmation,
-                    "ngrok-skip-browser-warning": "69420",
+                    _token: "{{ csrf_token() }}",
+    }, {
     })
-    .then(response => {
-        const token = response.data.token;
-        localStorage.setItem('token', token); // Save token to localStorage
-        console.log(token);
-        navigate("/pinconfirm");
-    })
+    .then(result =>{
+        console.log(result.data)
+        alert('success');
+        localStorage.setItem('token', result.data.data.token)
+        window.location.href = '/pinconfirm';
+      })
     .catch(()=>swal("Email Already Exist"))
     if (password !== confirmation) {
         // Display an error message or handle the mismatch
@@ -88,16 +90,7 @@ function Signup() {
                                     <MDBInput label='Confirm Password' size='lg' id='form2' type='password' required onChange={(e)=>setConfirmation(e.target.value)}/>
                                 </MDBCol>
                             </MDBRow>
-                            <MDBRow className='align-items-center pt-4 pb-3'>
-                                <MDBCol md='3' className='ps-5'>
-                                    <h6 className="mb-0">Upload CV</h6>
-                                </MDBCol>
-                                <MDBCol md='9' className='pe-5'>
-                                    <MDBFile size='lg' id='customFile' required />
-                                    <div className="small text-muted mt-2">Upload your CV/Resume or any other relevant file. Max file size 50 MB
-                                    </div>
-                                </MDBCol>
-                            </MDBRow>
+                            
                             <hr className="mx-n3" />
                                 <MDBBtn className='my-4 submit-btn' size='lg' type='submit'>Register</MDBBtn>
                             </MDBCardBody>

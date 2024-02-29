@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+/* eslint-disable no-lone-blocks */
+import React, { useState , useEffect } from 'react';
 import {
     MDBContainer,
     MDBNavbar,
@@ -9,10 +10,6 @@ import {
     MDBNavbarItem,
     MDBNavbarLink,
     MDBBtn,
-    MDBDropdown,
-    MDBDropdownToggle,
-    MDBDropdownMenu,
-    MDBDropdownItem,
     MDBCollapse,
 } from 'mdb-react-ui-kit';
 import 'mdb-react-ui-kit/dist/css/mdb.min.css';
@@ -22,10 +19,50 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import 'mdb-react-ui-kit/dist/css/mdb.min.css';
-import { Link } from "react-router-dom";
+import { Link, Navigate } from "react-router-dom";
 import 'react-bootstrap';
+import axios from 'axios';
+import { faCircleUser,faRightFromBracket } from '@fortawesome/free-solid-svg-icons';
+import Swal from 'sweetalert2';
 
     function Nav() {
+        const [isLoggedIn, setIsLoggedIn] = useState(false); 
+        const checkLoginStatus = () => {
+            // Check if user is logged in based on the presence of token in local storage
+            if (window.localStorage.getItem('token')) {
+              setIsLoggedIn(true);
+            } else {
+              setIsLoggedIn(false);
+            }
+          };
+          const handleLogoutConfirmation = () => {
+          Swal.fire({
+            title: 'Are you sure?',
+            text: 'You will be logged out!',
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#5271FF',
+            confirmButtonText: 'Yes',
+            cancelButtonText: 'Cancel'
+          }).then((result) => {
+            if (result.isConfirmed) {
+              handleLogout();
+            }
+          });
+        };
+          const handleLogout = () => {
+            axios.get("https://civet-top-actively.ngrok-free.app/api/logout")
+            .then(() => {
+              // After successful logout, clear token from local storage and update login state
+              localStorage.removeItem('token');
+              setIsLoggedIn(false);
+              window.location.href = '/signin';
+            });
+            
+          };
+          useEffect(() => {
+            checkLoginStatus();
+          }, [isLoggedIn]);
         const [openBasic, setOpenBasic] = useState(false);
     return (
         <>
@@ -53,35 +90,21 @@ import 'react-bootstrap';
                 <MDBNavbarItem>
                     <MDBNavbarLink href='/contact'>Contact</MDBNavbarLink>
                 </MDBNavbarItem>
-                {/* <MDBNavbarItem>
-                    <MDBDropdown>
-                <MDBDropdownToggle tag='a' className='nav-link' role='button'>
-                  pages
-                </MDBDropdownToggle>
-                <MDBDropdownMenu>
-                  <MDBDropdownItem link>Action</MDBDropdownItem>
-                  <MDBDropdownItem link>Another action</MDBDropdownItem>
-                  <MDBDropdownItem link>Something else here</MDBDropdownItem>
-                </MDBDropdownMenu>
-                </MDBDropdown>
-                </MDBNavbarItem> */}
-                    {/* <MDBNavbarItem>
-                <MDBDropdown>
-                    <MDBDropdownToggle tag='a' className='nav-link' role='button'>
-                    Blogs
-                    </MDBDropdownToggle>
-                    <MDBDropdownMenu>
-                    <MDBDropdownItem link>Action</MDBDropdownItem>
-                    <MDBDropdownItem link>Another action</MDBDropdownItem>
-                    <MDBDropdownItem link>Something else here</MDBDropdownItem>
-                    </MDBDropdownMenu>
-                </MDBDropdown>
-                </MDBNavbarItem> */}
-
                 </MDBNavbarNav>
                 <MDBContainer tag="form" fluid className='d-flex justify-content-center justify-content-lg-end'>
-                    <Link to={'/signin'}><MDBBtn outline color="info" className='me-2 btn-sign' type='button'>Sign in</MDBBtn></Link>
-                    <Link to={'/signup'}><MDBBtn outline color="info" className='me-2 btn-sign' type='button'>Sign up</MDBBtn></Link>
+                {isLoggedIn ? (
+        <>
+        <Link to="/profile"><FontAwesomeIcon icon={faCircleUser} className='user-icon'/></Link>
+        <FontAwesomeIcon icon={faRightFromBracket} className='user-icon' onClick={handleLogoutConfirmation}/>
+        {/* <MDBBtn outline color="info" className='me-2 btn-sign' type='button' id='sign' onClick={handleLogout}>Sign out</MDBBtn> */}
+        </>
+      ) : (
+        <>
+        <Link to='/signup'><MDBBtn outline color="info" className='me-2 btn-sign' type='button'>Sign up</MDBBtn></Link>
+        <Link to='/signin'><MDBBtn outline color="info" className='me-2 btn-sign' type='button' id='sign'>Sign in</MDBBtn></Link>
+        </>
+      )}
+                
                 </MDBContainer>
             </MDBCollapse>
             </MDBContainer>
