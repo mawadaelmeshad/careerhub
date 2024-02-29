@@ -13,8 +13,8 @@ function Signin() {
     window.open('https://civet-top-actively.ngrok-free.app/api/auth/google/redirect',"_blank","width=400,height = 400,left=500,top=500")
     
   }
-  const facebook = ()=>{
-    window.open('https://civet-top-actively.ngrok-free.app/api/login/google',"_blank","width=400,height = 400,left=500,top=500")
+  const github = ()=>{
+    window.open('https://civet-top-actively.ngrok-free.app/api/auth/github/redirect',"_blank","width=400,height = 400,left=500,top=500")
     
   }
     const [mail, setMail] = useState("");
@@ -42,11 +42,11 @@ function Signin() {
             <MDBCol col='4' md='6'>
               <div className="d-flex flex-row align-items-center justify-content-center">
                   <p className="lead fw-normal mb-0 me-3">Sign in with</p>
-                  <MDBBtn floating size='md' tag='a' className='me-2' style={{ color: 'white' }} onClick={()=>facebook()} >
-                  <MDBIcon fab icon='facebook' />
+                  <MDBBtn floating size='md' tag='a' className='me-2' style={{ color: 'white' }} onClick={()=>github()} >
+                  <MDBIcon fab icon='github' />
                   </MDBBtn>
                   <MDBBtn floating size='md' tag='a'  className='me-2' style={{ color: 'white' }} onClick={()=>google()}>
-                  <MDBIcon fab icon='github' />
+                  <MDBIcon fab icon='google' />
                   </MDBBtn>
               </div>
               <div className="divider d-flex align-items-center my-4">
@@ -57,7 +57,7 @@ function Signin() {
                   <MDBInput wrapperClass='mb-4' label='Password' id='formControlLg' type='password' size="lg" required onChange={(e)=>setPassword(e.target.value)}/>
 
                   <div className="d-flex justify-content-between mb-4">
-                      <a href="/reset">Forgot password?</a>
+                     <Link to='/reset'> <p>Forgot password?</p></Link>
                   </div>
 
                   <div className='text-center text-md-start mt-4 pt-2'>

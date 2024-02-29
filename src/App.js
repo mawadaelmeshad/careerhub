@@ -15,6 +15,7 @@ import Services from './components/Services';
 import PINconfirm from './components/PINconfirm';
 import Profile from './components/Profile';
 import Updateprofile from './components/Updateprofile';
+import Protectedroutes from './components/Protectedroutes';
 
 
 function App() {
@@ -36,23 +37,26 @@ function App() {
         </>
         }>
         </Route>
+        <Route element={<Protectedroutes />}>
+
+        <Route path='/email_confirmation' element={<Email_confirmation />}>
+        </Route>
+        <Route path='/pinconfirm' element={<PINconfirm />}></Route>
+        <Route path='/profile' element={<Profile/>}></Route>
+        <Route path='/updateprofile' element={<Updateprofile/>}></Route>
+
+        </Route>
+        <Route path='/changepass' element={<Changepass />}></Route>
+        <Route path='/reset' element={<Reset />}></Route>
+        <Route path='/resetmsj' element={<Resetmsj />}></Route>
         <Route path='/contact' element={<Contact />}></Route>
         <Route path='/signin' element={<Signin />}></Route>
         <Route path='/signup' element={<Signup />}></Route>
         <Route path='/home' element={<Home />}></Route>
         <Route path='/services' element={<Services />}></Route>
-        <Route path='/email_confirmation' element={<Email_confirmation />}>
-        </Route>
-        <Route path='/changepass' element={<Changepass />}></Route>
-        <Route path='/reset' element={<Reset />}></Route>
-        <Route path='/resetmsj' element={<Resetmsj />}></Route>
+        
         <Route path='/browse' element={<Browse />}></Route>
-        <Route path='/pinconfirm' element={<PINconfirm />}></Route>
-        <Route path='/profile' element={<Profile/>}></Route>
-        <Route path='/updateprofile' element={<Updateprofile/>}></Route>
-
-
-
+    
       </Routes>
       <Footer />
     </div>

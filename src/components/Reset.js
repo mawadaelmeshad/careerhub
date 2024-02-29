@@ -44,7 +44,7 @@ function Reset() {
                             <MDBInput label='example@example.com' size='lg' id='form2' type='email' required onChange={(e)=>setMail(e.target.value)}/>
                             </MDBCol>
                         </MDBRow>
-                        <MDBBtn className='my-4' size='lg' type='submit' >Send pin
+                        <MDBBtn className='my-4' size='lg' type='submit' onClick={submit} >Send pin
                         </MDBBtn>
                     </MDBCardBody>
                 </MDBCard>          

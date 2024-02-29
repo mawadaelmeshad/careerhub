@@ -18,10 +18,15 @@ import ReactCodeInput from 'react-code-input';
 function PINconfirm() {
     const [PIN, setPIN] = useState("");
     const navigate = useNavigate();
+    const token = localStorage.getItem('token');
+    const ans = PIN.toString();
+    console.log(ans);
+    console.log(typeof(ans));
+    console.log(token);
     const submit = (e)=>{
         e.preventDefault()
         axios.post('https://civet-top-actively.ngrok-free.app/api/email/verify',{
-            token:PIN
+                pin: ans,
         })
         .then(() => {
             navigate("/home");
@@ -72,7 +77,7 @@ function PINconfirm() {
                                 <p>We have sent you an e-mail, please write the PIN</p>
                                 {/* <ReactCodeInput type='number'
                             fields={6} {...props} required  onChange={(value) => setPIN(value)}/> */}
-                            <MDBInput type='number' label='PIN'  wrapperClass='mb-4' required onChange={(e)=>setPIN(e.target.value)}/>
+                            <MDBInput type='text' label='PIN'  wrapperClass='mb-4' required onChange={(e)=>setPIN(e.target.value)}/>
                             </MDBRow>
                             <MDBBtn className='my-4 submit-btn' size='lg' type='submit'>Submit
                             </MDBBtn>

@@ -35,7 +35,6 @@ function Signup() {
     })
     .then(result =>{
         console.log(result.data)
-        alert('success');
         localStorage.setItem('token', result.data.data.token)
         window.location.href = '/pinconfirm';
       })

@@ -7,6 +7,7 @@ import {
     MDBCol,
     MDBCard,
     MDBCardBody,
+    MDBInput
 }
 from 'mdb-react-ui-kit';
 import {useState} from 'react'
@@ -22,7 +23,7 @@ function Resetmsj() {
         axios.post('https://civet-top-actively.ngrok-free.app/api/verify/pin',{
             PIN:PIN,
         })
-        .then(()=>navigate("/resetmsj"))
+        .then(()=>navigate("/changepass"))
             .catch(()=>swal("PIN is incorrect!"))
         }
     const props = {
@@ -64,10 +65,9 @@ function Resetmsj() {
                         <MDBCardBody className='px-4'>
                             <MDBRow className='align-items-center pt-4 pb-3'>
                                 <p>We have sent you an e-mail, please write the PIN</p>
-                                <ReactCodeInput type='number'
-                            fields={6} {...props} required  onChange={(value) => setPIN(value)}/>
+                                <MDBInput type='text' label='PIN'  wrapperClass='mb-4' required onChange={(e)=>setPIN(e.target.value)}/>
                             </MDBRow>
-                            <MDBBtn className='my-4 submit-btn' size='lg' type='submit'>Submit
+                            <MDBBtn className='my-4 submit-btn' size='lg' type='submit' onClick={submit}>Submit 
                             </MDBBtn>
                         </MDBCardBody>
                     </MDBCard>      

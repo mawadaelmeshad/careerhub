@@ -18,9 +18,14 @@ import './css-components/confirm.css';
 function Email_confirmation(){
     const [mail, setMail] = useState("");
     const navigate = useNavigate();
+    const token = localStorage.getItem('token');
+    
     const submitt = (e)=>{
     e.preventDefault()
     axios.post('https://civet-top-actively.ngrok-free.app/api/email/verify',{
+        headers: {
+            Authorization: `Bearer ${token}`
+        },
                     email : mail,
     })
     .then(()=>navigate("/pinconfirm"))
