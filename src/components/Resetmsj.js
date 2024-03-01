@@ -17,11 +17,17 @@ import swal from 'sweetalert';
 import ReactCodeInput from 'react-code-input';
 function Resetmsj() {
     const [PIN, setPIN] = useState("");
+    const [Mail, setMail] = useState("");
+
     const navigate = useNavigate();
+    const ans=PIN.toString();
+    console.log(PIN);
+    console.log(typeof(ans));
     const submit = (e)=>{
         e.preventDefault()
         axios.post('https://civet-top-actively.ngrok-free.app/api/verify/pin',{
-            PIN:PIN,
+            email:Mail,
+            pin:PIN,
         })
         .then(()=>navigate("/changepass"))
             .catch(()=>swal("PIN is incorrect!"))
@@ -64,7 +70,8 @@ function Resetmsj() {
                     <MDBCard>
                         <MDBCardBody className='px-4'>
                             <MDBRow className='align-items-center pt-4 pb-3'>
-                                <p>We have sent you an e-mail, please write the PIN</p>
+                                <p>We have sent you an e-mail, please write your email again and the PIN</p>
+                                <MDBInput type='email' label='example@gmail.com'  wrapperClass='mb-4' required onChange={(e)=>setMail(e.target.value)}/>
                                 <MDBInput type='text' label='PIN'  wrapperClass='mb-4' required onChange={(e)=>setPIN(e.target.value)}/>
                             </MDBRow>
                             <MDBBtn className='my-4 submit-btn' size='lg' type='submit' onClick={submit}>Submit 

@@ -25,9 +25,16 @@ function PINconfirm() {
     console.log(token);
     const submit = (e)=>{
         e.preventDefault()
-        axios.post('https://civet-top-actively.ngrok-free.app/api/email/verify',{
-                pin: ans,
-        })
+        axios.post( 'https://civet-top-actively.ngrok-free.app/api/email/verify',
+        {
+            pin: PIN,
+        },
+        {
+            headers: {
+                Authorization: `Bearer ${token}`,
+            },
+        }
+    )
         .then(() => {
             navigate("/home");
             swal("Thank you for confirming your mail");
